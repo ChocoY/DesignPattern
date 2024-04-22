@@ -4,6 +4,8 @@
 
 package create.factory;
 
+import p1.factory.Circle;
+
 /**
  *
  *
@@ -22,6 +24,14 @@ public class FactoryPatternDemo {
     }
 }
 
+class Circle implements Shape {
+    @Override
+    public void draw() {
+        System.out.println("Inside Circle::draw() method.");
+    }
+}
+
+
 interface Shape {
     void draw();
 }
@@ -36,13 +46,6 @@ class Square implements Shape {
     @Override
     public void draw() {
         System.out.println("Inside Square::draw() method.");
-    }
-}
-
-class Circle implements Shape {
-    @Override
-    public void draw() {
-        System.out.println("Inside Circle::draw() method.");
     }
 }
 
